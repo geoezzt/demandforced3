@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Demandforce Easy App</title>
+	<link rel="stylesheet" type="text/css" href="d3location/styles.css" />
+	<link rel="stylesheet" type="text/css" href="d3location/jquery-ui/jquery-ui-1.8.10.custom.css" />
+	<script type="text/javascript" src="d3location/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="d3location/common.js"></script>
+	<script type="text/javascript">
+		var page = {
+				contextPath: "/facebook",
+				appRootUrl: "/facebook/d3review",
+				businessId: ""
+			};
+	</script>
+</head>
+<body>
+
+
+<div class="header"><h2>Demandforce Connect Authorization</h2></div>
+
+<div id="login">
+	<br />
+	<h2>Thank you for choosing Demandforce Connect for Facebook</h2>
+	<br />
+	<h3>To proceed, you must login to the Demandforce D3 account you wish to add this application for:</h3>
+
+	<form action="https://www.demandforced3.com/facebook/d3review?action=authProcess" name="form" method="post">
+		<input type="hidden" name="signed_request" value="" />
+
+		<div class="d3logo">
+			<img src="https://www.demandforced3.com/facebook/d3location/df-icon.png" />
+		</div>
+		<div class="namePassword">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" maxlength="50" class="field" value="" />
+			<div class="clear"></div>
+	
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" maxlength="30" class="field" value="" />
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		
+		<input type="checkbox" id="terms" name="terms" class="terms" />
+		<div for="terms" class="termsText">
+			By checking this box, you agree to be bound by our <a href="https://www.demandforce.com/terms.php" target="_blank">standard terms and conditions</a>, and you authorize Demandforce to charge your existing credit card on file, or another that you provide, for the monthly subscription and any installation fee associated with this service.
+		</div>
+		<div class="clear"></div>
+
+		<div class="errorMessage"></div>
+		
+		<input type="submit" value="Authorize" class="inputsubmit" />
+		<div class="clear"></div>
+	</form>
+
+	<div class="clear"></div>
+
+	<br />
+
+	<div>
+		<a href="https://www.demandforced3.com/businessportal/resetPassword.jsp" target="_blank">
+			Forgot your password?
+		</a>
+		<br />
+		<a href="https://demandforce.com/contact/general.php" target="_blank">
+			Don't have a Demandforce D3 account? View a demo now.
+		</a>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+	<div class="line"></div>
+	
+	
+	<div class="company">
+		<a href="http://www.facebook.com/apps/application.php?id=142464019105982" target="_top">Want this application? Click here!</a>
+		This application is provided by <a href="http://www.demandforce.com" target="_blank">Demandforce, Inc.</a>
+	</div>
+</div>
+
+<div id="fb-root"></div>
+
+<script type="text/javascript">
+	window.fbAsyncInit = function() {
+		FB.init({appId: "142464019105982", status: true, cookie: true, xfbml: true});
+		FB.Canvas.setSize();
+		//FB.Canvas.setAutoResize(); //set size according to iframe content size
+	};
+	
+	(function() {
+		var e = document.createElement("script");
+		e.async = true;
+		e.src = document.location.protocol + "//connect.facebook.net/en_US/all.js";
+		document.getElementById("fb-root").appendChild(e);
+	}());
+</script>
+
+
+
+</body>
+</html>
+
